@@ -4,11 +4,13 @@ function computerPlay() {
     return randomChoice;
 }
 function singleRound(playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection ==="scissors") {
-        alert("Rock wins!");
+    if (playerSelection === computerSelection) {
+        console.log("Draw!");
+    } else if ((playerSelection === "rock" && computerSelection == "scissors") || (playerSelection === "scissors" && computerSelection === "paper") || (playerSelection === "paper" && computerSelection === "rock")) {
+        console.log("You win!")
     } else {
-        alert("Fill");
+        console.log("You lose!")
     }
 }
 
-singleRound("rock", "scissors")
+singleRound("scissors", "scissors")
