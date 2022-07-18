@@ -14,8 +14,10 @@ function singleRound(playerSelection, computerSelection) {
         console.log(`Draw! ${playerSelection} equals ${computerSelection}`)
     } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === "paper" && computerSelection === "rock")) {
         console.log(`You win! ${playerSelection} beats ${computerSelection}!`)
-    } else {
+    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === "paper" && computerSelection === "rock")) {
         console.log(`You lose! ${computerSelection} beats ${playerSelection}!`)
+    } else {
+        console.log('Please sumbit a valid option!')
     }
 }
 
