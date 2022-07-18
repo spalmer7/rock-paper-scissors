@@ -16,4 +16,4 @@ function singleRound(playerSelection, computerSelection) {
     }
 }
 
-singleRound('rock', computerPlay);
+singleRound('rock', computerPlay());
