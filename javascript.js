@@ -1,3 +1,6 @@
+let playerChoice = prompt("Rock, Paper, or Scissors?");
+let playerChoiceLower = playerChoice.toLowerCase();
+
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];
     let randomChoice = (choices[Math.floor(Math.random() * choices.length)]);
@@ -16,4 +19,4 @@ function singleRound(playerSelection, computerSelection) {
     }
 }
 
-singleRound('rock', computerPlay());
+singleRound(playerChoiceLower, computerPlay());
