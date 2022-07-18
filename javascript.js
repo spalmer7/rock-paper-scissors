@@ -1,4 +1,4 @@
-let playerChoice = prompt("Rock, Paper, or Scissors?");
+let playerChoice = prompt('Rock, Paper, or Scissors?');
 let playerChoiceLower = playerChoice.toLowerCase();
 
 function computerPlay() {
