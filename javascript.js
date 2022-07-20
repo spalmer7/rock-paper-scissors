@@ -23,6 +23,9 @@ function singleRound(playerSelection, computerSelection) {
 function game() {
     for (let i = 1; i <= 5; i++) {
         let playerChoice = prompt('Rock, Paper or Scissors?');
+            if (playerChoice === null) {
+                break;
+            }
         let playerChoiceLower = playerChoice.toLowerCase();
         singleRound(playerChoiceLower, computerPlay());
     }
