@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];
     let randomChoice = (choices[Math.floor(Math.random() * choices.length)]);
@@ -9,7 +12,7 @@ function singleRound(playerSelection, computerSelection) {
         console.log(`Draw! ${playerSelection} equals ${computerSelection}`)
         alert(`Draw! ${playerSelection} equals ${computerSelection}`)
     } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === "paper" && computerSelection === "rock")) {
-        console.log(`You win! ${playerSelection} beats ${computerSelection}!`)
+        console.log(`You win! ${playerSelection} beats ${computerSelection}! Player Score =` + playerScore + ` !`)
         alert(`You win! ${playerSelection} beats ${computerSelection}!`)
     } else if ((computerSelection === 'rock' && playerSelection === 'scissors') || (computerSelection === 'scissors' && playerSelection === 'paper') || (computerSelection === "paper" && playerSelection === "rock")) {
         console.log(`You lose! ${computerSelection} beats ${playerSelection}!`)
