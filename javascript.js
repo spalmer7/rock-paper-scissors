@@ -1,12 +1,15 @@
+// Score variables
 let playerScore = 0;
 let computerScore = 0;
 
+// Creates the logic for random computer selection
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];
     let randomChoice = (choices[Math.floor(Math.random() * choices.length)]);
     return randomChoice;
 }
 
+// This function plays through a round and keeps score.
 function singleRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         console.log(`Draw! ${playerSelection} equals ${computerSelection}`)
@@ -27,6 +30,7 @@ function singleRound(playerSelection, computerSelection) {
     }
 }
 
+// Plays the entire game through, 5 rounds.
 function game() {
     for (let i = 1; i <= 5; i++) {
         let playerChoice = prompt('Rock, Paper or Scissors?');
