@@ -30,7 +30,7 @@ function singleRound(playerSelection, computerSelection) {
     }
 }
 
-// Plays the entire game through, 5 rounds.
+// Plays the entire game through, best of 5 rounds.
 function game() {
     while( playerScore < 3 && computerScore < 3 ) {
         let playerChoice = prompt('Rock, Paper or Scissors?');
@@ -39,6 +39,9 @@ function game() {
         }
         let playerChoiceLower = playerChoice.toLowerCase();
         singleRound(playerChoiceLower, computerPlay());
+        if ((playerScore === 3) || (computerScore === 3)) {
+            alert(`Game Over! Final Score\n Player: ${playerScore}\n Computer: ${computerScore}`)
+        }
     }
 }
 
