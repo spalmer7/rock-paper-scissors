@@ -32,7 +32,7 @@ function singleRound(playerSelection, computerSelection) {
 
 // Plays the entire game through, 5 rounds.
 function game() {
-    for (let i = 1; i <= 5; i++) {
+    while( playerScore < 3 && computerScore < 3 ) {
         let playerChoice = prompt('Rock, Paper or Scissors?');
         if (playerChoice === null) {
             break;
