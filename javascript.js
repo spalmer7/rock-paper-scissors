@@ -12,7 +12,7 @@ function singleRound(playerSelection, computerSelection) {
         console.log(`Draw! ${playerSelection} equals ${computerSelection}`)
         alert(`Draw! ${playerSelection} equals ${computerSelection}`)
     } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === "paper" && computerSelection === "rock")) {
-        console.log(`You win! ${playerSelection} beats ${computerSelection}! Player Score =` + playerScore + ` !`)
+        console.log(`You win! ${playerSelection} beats ${computerSelection}!`)
         alert(`You win! ${playerSelection} beats ${computerSelection}!`)
     } else if ((computerSelection === 'rock' && playerSelection === 'scissors') || (computerSelection === 'scissors' && playerSelection === 'paper') || (computerSelection === "paper" && playerSelection === "rock")) {
         console.log(`You lose! ${computerSelection} beats ${playerSelection}!`)
@@ -23,6 +23,17 @@ function singleRound(playerSelection, computerSelection) {
     }
 }
 
+function score(playerSelection, computerSelection) {
+    if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === "paper" && computerSelection === "rock")) {
+      playerScore = playerScore + 1;
+      console.log(`Player Score: ${playerScore}!`)
+    } else if ((computerSelection === 'rock' && playerSelection === 'scissors') || (computerSelection === 'scissors' && playerSelection === 'paper') || (computerSelection === "paper" && playerSelection === "rock")) {
+      computerScore = computerScore + 1;
+      console.log(`Computer Score: ${computerScore}!`)
+    } else {
+
+    }
+}
 function game() {
     for (let i = 1; i <= 5; i++) {
         let playerChoice = prompt('Rock, Paper or Scissors?');
@@ -31,6 +42,7 @@ function game() {
             }
         let playerChoiceLower = playerChoice.toLowerCase();
         singleRound(playerChoiceLower, computerPlay());
+        score(playerChoiceLower, computerPlay());
     }
 }
 
