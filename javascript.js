@@ -14,12 +14,16 @@ function singleRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         console.log(`Draw! ${playerSelection} equals ${computerSelection}`)
         alert(`Draw! ${playerSelection} equals ${computerSelection}\nPlayer Score: ${playerScore}\nComputer Score: ${computerScore}`)
-    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === "paper" && computerSelection === "rock")) {
+    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') 
+            || (playerSelection === 'scissors' && computerSelection === 'paper') 
+            || (playerSelection === "paper" && computerSelection === "rock")) {
         console.log(`You win! ${playerSelection} beats ${computerSelection}!`)
         playerScore = playerScore + 1;
         console.log(`Player Score: ${playerScore}!`)
         alert(`You win! ${playerSelection} beats ${computerSelection}!\nPlayer Score: ${playerScore}\nComputer Score: ${computerScore}`)
-    } else if ((computerSelection === 'rock' && playerSelection === 'scissors') || (computerSelection === 'scissors' && playerSelection === 'paper') || (computerSelection === "paper" && playerSelection === "rock")) {
+    } else if ((computerSelection === 'rock' && playerSelection === 'scissors') 
+            || (computerSelection === 'scissors' && playerSelection === 'paper') 
+            || (computerSelection === "paper" && playerSelection === "rock")) {
         console.log(`You lose! ${computerSelection} beats ${playerSelection}!`)
         computerScore = computerScore + 1;
         console.log(`Computer Score: ${computerScore}!`)
@@ -32,7 +36,7 @@ function singleRound(playerSelection, computerSelection) {
 
 // This function plays the entire game through, best of 5 rounds.
 function game() {
-    while( playerScore < 3 && computerScore < 3 ) {
+    while (playerScore < 3 && computerScore < 3) {
         let playerChoice = prompt('Rock, Paper or Scissors?');
         if (playerChoice === null) {
             break;
